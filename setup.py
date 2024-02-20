@@ -7,5 +7,5 @@ setup(
     description="A Python package for common tasks in the OmegaBlockchain project",
     py_modules=["omega_utils"],
     package_dir={"": "src"},
-    install_requires=["django", "djangorestframework"],
+    install_requires=[list(map(str.strip, open("requirements.txt").readlines()))],
 )
